@@ -154,11 +154,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     return response.json();
                 })
                 .then(data =>{
-                    if(data.success == "true"){
+                    if(data.success === "true"){
                         window.location.href = `/app/index.html`;
                     }
                     else{
-                        console.error("La solicitud fue exitosa, pero la respuesta indica un error: "+data.message)
+                        console.error("La solicitud fue exitosa, pero la respuesta indica un error: "+data.message);
                     }
                 });
     });

@@ -1,5 +1,6 @@
+
 document.addEventListener("DOMContentLoaded", function(){
-    const movieCards = document.getElementById("moviesCards");
+    const moviesCards = document.getElementById("moviesCards");
     const movies =[];
     
     function loadMoviesList(){
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(){
                                     </div>
                                 </div>
                             </div>
-                        `
+                        `;
                     });
                 });
     }
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 <img src="data:image/jpeg;base64,${movie.imagenBase64}" class="card-img-top h-75" alt="imagen de portada">
                 <div class="card-body">
                     <h5 class="card-title">${movie.nombre}</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">${movie.sinopsis}</p>
                 </div>
             </div>
         `;
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function(){
     searchForm.addEventListener("submit", function(e){
        e.preventDefault();
        const searchTerm = searchForm.querySelector("input[type='search']").value;
-       moviesFilters(searchTerm);
+       filterMovies(searchTerm);
     });
 
     moviesCards.addEventListener("click", function(e){

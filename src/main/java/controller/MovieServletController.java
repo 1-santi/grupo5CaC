@@ -14,8 +14,8 @@ import org.apache.commons.io.IOUtils;
 @MultipartConfig(
         location = "/media/temp",
         fileSizeThreshold = 1024 * 1024, //Tamaño umbral 1MB
-        maxFileSize = 1024 * 1024 * 5, //Tamaño maximo de archivo en bytes 5MB
-        maxRequestSize = 1024 * 1024 * 10 // Tamaño maximo de request en bytes 10MB
+        maxFileSize = 1024 * 1024 * 10, //Tamaño maximo de archivo en bytes 5MB
+        maxRequestSize = 1024 * 1024 * 20 // Tamaño maximo de request en bytes 10MB
 )
 public class MovieServletController extends HttpServlet{
     

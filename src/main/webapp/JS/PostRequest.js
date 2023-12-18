@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const imagenPreview = document.getElementById("imagenPreview");
     const imagenContainer = document.getElementById("imagenContainer");
     
-    addMovieFormForm.addEventListener("submit", function(e){
+    addMovieForm.addEventListener("submit", function(e){
         e.preventDefault();
         
         const datos = new FormData();
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function(){
                         precioElement.value = "";
                         imageElement.value = "";
                         imagenContainer.classList.add("d-none");
-                    },3000)
+                    },3000);
                 });
     });
     
